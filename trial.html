@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Free 1:1 Trial | GCSE Solved</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { navy: '#0F172A', electric: '#3B82F6', success: '#10B981' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .step { display: none; }
+        .step.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-brand-navy">
+                GCSE<span class="text-brand-electric font-black">SOLVED</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+                <a href="subjects.html" class="hover:text-brand-electric transition">Subjects</a>
+                <a href="Methodology.html" class="hover:text-brand-electric transition">Methodology</a>
+                <a href="pricing.html" class="hover:text-brand-electric transition">Pricing</a>
+                <a href="Team.html" class="hover:text-brand-electric transition">Team</a>
+                <a href="index.html" class="bg-brand-navy text-white px-6 py-3 rounded-full hover:bg-slate-800 transition">Back to Home</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-slate-900 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-2xl mx-auto px-6">
+            
+            <div class="mb-12 flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+                <p class="text-xs font-black uppercase tracking-widest text-brand-electric" id="step-indicator">Step 1 of 4: Contact Details</p>
+                <div class="w-32 h-2 bg-slate-100 rounded-full overflow-hidden">
+                    <div id="progress-bar" class="h-full bg-brand-electric transition-all duration-500 w-1/4"></div>
+                </div>
+            </div>
+
+            <form id="trial-form" class="bg-white p-8 md:p-12 rounded-[3rem] shadow-2xl border border-slate-100">
+                
+                <input type="hidden" name="location" id="location-input">
+
+                <div class="step active" id="step-1">
+                    <h2 class="text-3xl font-black text-brand-navy mb-8">Who are we helping?</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-wide">Parent's Full Name *</label>
+                            <input type="text" name="parentName" required class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-wide">Student's Full Name *</label>
+                            <input type="text" name="studentName" required class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-wide">Contact Number *</label>
+                                <input type="tel" name="contactNumber" required placeholder="+44" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-wide">WhatsApp (Optional)</label>
+                                <input type="tel" name="whatsappNumber" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-wide">Email Address *</label>
+                            <input type="email" name="emailAddress" required class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" id="step-2">
+                    <h2 class="text-3xl font-black text-brand-navy mb-8">Academic Profile</h2>
+                    <div class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-wide">Year Group *</label>
+                                <select name="yearGroup" required class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                                    <option value="">Select Year</option>
+                                    <option value="Year 9">Year 9 / Grade 9</option>
+                                    <option value="Year 10">Year 10 / Grade 10</option>
+                                    <option value="Year 11">Year 11 / Grade 11</option>
+                                    <option value="A-Level">A-Level</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-wide">Exam Board</label>
+                                <select name="examBoard" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                                    <option value="Not Sure">Not Sure Yet</option>
+                                    <option value="AQA">AQA</option>
+                                    <option value="Edexcel">Edexcel</option>
+                                    <option value="OCR">OCR</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-wide">Subject(s) for Trial *</label>
+                            <input type="text" name="subjects" required class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" name="currentGrade" placeholder="Current Grade" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                            <input type="text" name="targetGrade" placeholder="Target Grade" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" id="step-3">
+                    <h2 class="text-3xl font-black text-brand-navy mb-8">Schedule</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-500 mb-2 uppercase tracking-wide">Trial Availability *</label>
+                            <input type="text" name="trialAvailability" placeholder="e.g., Tuesday 4 PM" required class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input type="text" name="weeklyFrequency" placeholder="Classes per week" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                            <input type="text" name="preferredDays" placeholder="Preferred Days" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                        </div>
+                        <textarea name="weakPoints" rows="3" placeholder="Specific Weak Points..." class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none"></textarea>
+                    </div>
+                </div>
+
+                <div class="step" id="step-4">
+                    <h2 class="text-3xl font-black text-brand-navy mb-8">Final Details</h2>
+                    <div class="space-y-6">
+                        <select name="priceRange" required class="w-full px-6 py-4 bg-blue-50 border border-brand-electric/20 rounded-2xl font-bold">
+                            <option value="Discuss during trial">Discuss during trial</option>
+                            <option value="£15 - £25">£15 - £25 (Mentor)</option>
+                            <option value="£30 - £70">£30 - £70 (Specialist)</option>
+                            <option value="£100+">£100+ (Elite)</option>
+                        </select>
+                        <input type="text" name="shortTermExpectations" placeholder="Short Term Expectations" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                        <input type="text" name="longTermExpectations" placeholder="Long Term Goals" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl outline-none">
+                    </div>
+                </div>
+
+                <div class="mt-12 flex justify-between gap-4">
+                    <button type="button" id="prev-btn" class="hidden px-8 py-4 border border-slate-200 rounded-2xl font-bold text-slate-400">Previous</button>
+                    <button type="button" id="next-btn" class="flex-1 px-8 py-4 bg-brand-navy text-white rounded-2xl font-black">Next Step</button>
+                    <button type="submit" id="submit-btn" class="hidden flex-1 px-8 py-4 bg-brand-electric text-white rounded-2xl font-black">Submit Request</button>
+                </div>
+            </form>
+
+            <div id="success-msg" class="hidden text-center bg-white p-12 rounded-[3rem] shadow-2xl border border-brand-success/20">
+                <div class="w-20 h-20 bg-green-100 text-brand-success rounded-full flex items-center justify-center text-4xl mx-auto mb-6">✓</div>
+                <h2 class="text-3xl font-black mb-4">Request Received!</h2>
+                <p class="text-slate-500">Matching your child with the best expert. Check WhatsApp shortly.</p>
+                <a href="index.html" class="inline-block mt-8 text-brand-electric font-bold underline">Home</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Use the script URL you provided in the last message
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx3V8TAQ1OWUW3Pz3ngow70864V4lkAHSgXV0iyiGv_0ve_rCQwpVWaIjVYV3mddCzLVw/exec';
+        
+        // Fix: Check if element exists before setting value
+        const locInput = document.getElementById('location-input');
+        if (locInput) {
+            locInput.value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        }
+
+        const form = document.getElementById('trial-form');
+        const steps = document.querySelectorAll('.step');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const indicator = document.getElementById('step-indicator');
+        let currentStep = 0;
+
+        const stepTitles = ["Contact Details", "Academic Profile", "Logistics", "Final Details"];
+
+        function updateStep() {
+            steps.forEach((step, index) => step.classList.toggle('active', index === currentStep));
+            prevBtn.classList.toggle('hidden', currentStep === 0);
+            nextBtn.classList.toggle('hidden', currentStep === steps.length - 1);
+            submitBtn.classList.toggle('hidden', currentStep !== steps.length - 1);
+            progressBar.style.width = ((currentStep + 1) / steps.length) * 100 + '%';
+            indicator.innerText = `Step ${currentStep + 1} of 4: ${stepTitles[currentStep]}`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            const inputs = steps[currentStep].querySelectorAll('input[required], select[required]');
+            let valid = true;
+            inputs.forEach(i => {
+                if(!i.value) { i.classList.add('border-red-500'); valid = false; }
+                else { i.classList.remove('border-red-500'); }
+            });
+            if (valid) { currentStep++; updateStep(); }
+        });
+
+        prevBtn.addEventListener('click', () => { if(currentStep > 0) { currentStep--; updateStep(); } });
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Processing...";
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(r => {
+                    form.classList.add('hidden');
+                    document.getElementById('success-msg').classList.remove('hidden');
+                })
+                .catch(err => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = "Try Again";
+                    alert("Error! Please contact via WhatsApp.");
+                });
+        });
+    </script>
+</body>
+</html>
