@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Academic Faculty | GCSE Solved</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            electric: '#3B82F6',
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-900 font-sans antialiased">
+
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-brand-navy">
+                GCSE<span class="text-brand-electric font-black">SOLVED</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+                <a href="subjects.html" class="hover:text-brand-electric transition">Subjects</a>
+                <a href="Methodology.html" class="hover:text-brand-electric transition">Methodology</a>
+                <a href="pricing.html" class="hover:text-brand-electric transition">Pricing</a>
+                <a href="Team.html" class="text-brand-electric font-bold">Team</a>
+                <a href="index.html" class="bg-brand-navy text-white px-6 py-3 rounded-full hover:bg-slate-800 transition">Back to Home</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-slate-900 focus:outline-none">
+                <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 absolute w-full left-0 top-20 shadow-2xl z-50">
+            <div class="px-6 py-8 flex flex-col space-y-6">
+                <a href="subjects.html" class="text-xl font-bold text-slate-700">Subjects</a>
+                <a href="Methodology.html" class="text-xl font-bold text-slate-700">Methodology</a>
+                <a href="pricing.html" class="text-xl font-bold text-slate-700">Pricing</a>
+                <a href="Team.html" class="text-xl font-bold text-brand-electric">Team</a>
+                <a href="index.html" class="w-full bg-brand-navy text-white text-center py-4 rounded-2xl font-extrabold">Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-12 md:pt-48 md:pb-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="inline-block px-4 py-1.5 bg-blue-100 text-brand-electric rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                World-Class Academic Council
+            </span>
+            <h1 class="text-4xl md:text-7xl font-black text-brand-navy mb-6 tracking-tight">
+                Guided by <span class="text-brand-electric">Global Experts</span>.
+            </h1>
+            <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
+                We have curated a team of PhD scholars, Aerospace Engineers, and Senior Board Examiners from across our global network to ensure your child receives the highest caliber of GCSE instruction.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-brand-electric rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-700"></div>
+                    <div class="relative bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden">
+                        <div class="aspect-[4/5] bg-slate-100">
+                            <img src="https://www.exaltedmercury.com/imgs/1000203615.webp" alt="Dr. Neelamber Thapa" class="w-full h-full object-cover  transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <span class="text-[10px] font-bold text-brand-electric uppercase tracking-widest">Chief Academic Officer</span>
+                            <h3 class="text-2xl font-black text-brand-navy mt-1">Dr. Neelamber Thapa</h3>
+                            <p class="text-slate-500 text-sm mt-4 leading-relaxed">
+                                PhD in Applied Mathematics. Dr. Thapa oversees the global mathematical standards for GCSE Solved, specializing in advanced Calculus and exam-scoring strategies.
+                            </p>
+                            <div class="mt-6 pt-6 border-t border-slate-50 flex items-center justify-between">
+                                <span class="bg-slate-900 text-white text-[9px] px-3 py-1 rounded-full font-black uppercase">PhD / Applied Math</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-brand-electric rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-700"></div>
+                    <div class="relative bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden">
+                        <div class="aspect-[4/5] bg-slate-100">
+                            <img src="https://www.exaltedmercury.com/imgs/1000205881.webp" alt="Mr. David Chen" class="w-full h-full object-cover  transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <span class="text-[10px] font-bold text-brand-electric uppercase tracking-widest">Director of STEM</span>
+                            <h3 class="text-2xl font-black text-brand-navy mt-1">Mr. David Chen</h3>
+                            <p class="text-slate-500 text-sm mt-4 leading-relaxed">
+                                Former Aerospace Engineer with an MSc in Physics. David leads the Physics department, focusing on OCR and AQA Higher Tier syllabi.
+                            </p>
+                            <div class="mt-6 pt-6 border-t border-slate-50 flex items-center justify-between">
+                                <span class="bg-slate-900 text-white text-[9px] px-3 py-1 rounded-full font-black uppercase">Aerospace Specialist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-brand-electric rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-700"></div>
+                    <div class="relative bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden">
+                        <div class="aspect-[4/5] bg-slate-100">
+                            <img src="https://www.exaltedmercury.com/imgs/1000203613.webp" alt="Ms. Neha Rawat" class="w-full h-full object-cover  transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <span class="text-[10px] font-bold text-brand-electric uppercase tracking-widest">Head of Chemistry</span>
+                            <h3 class="text-2xl font-black text-brand-navy mt-1">Ms. Neha Rawat</h3>
+                            <p class="text-slate-500 text-sm mt-4 leading-relaxed">
+                                Specialist in GCSE Chemistry. Neha leads our curriculum design for AQA and Edexcel, ensuring students master Organic Chemistry with precision.
+                            </p>
+                            <div class="mt-6 pt-6 border-t border-slate-50 flex items-center justify-between">
+                                <span class="bg-slate-900 text-white text-[9px] px-3 py-1 rounded-full font-black uppercase">Chemistry Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-brand-electric rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-700"></div>
+                    <div class="relative bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden">
+                        <div class="aspect-[4/5] bg-slate-100">
+                            <img src="https://www.exaltedmercury.com/imgs/1000205880.webp" alt="Prof. Deiana Vi" class="w-full h-full object-cover  transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <span class="text-[10px] font-bold text-brand-electric uppercase tracking-widest">Head of Computer Science</span>
+                            <h3 class="text-2xl font-black text-brand-navy mt-1">Prof. Deiana Vi</h3>
+                            <p class="text-slate-500 text-sm mt-4 leading-relaxed">
+                                Leading our coding and CS division. Deiana simplifies algorithms and programming for GCSE students aiming for Grade 9.
+                            </p>
+                            <div class="mt-6 pt-6 border-t border-slate-50 flex items-center justify-between">
+                                <span class="bg-slate-900 text-white text-[9px] px-3 py-1 rounded-full font-black uppercase">CS / AI Lead</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-brand-electric rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-700"></div>
+                    <div class="relative bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden">
+                        <div class="aspect-[4/5] bg-slate-100">
+                            <img src="https://www.exaltedmercury.com/imgs/1000205879.webp" alt="Ms. Leena" class="w-full h-full object-cover  transition duration-700">
+                        </div>
+                        <div class="p-8">
+                            <span class="text-[10px] font-bold text-brand-electric uppercase tracking-widest">Head of Foundations</span>
+                            <h3 class="text-2xl font-black text-brand-navy mt-1">Ms. Leena</h3>
+                            <p class="text-slate-500 text-sm mt-4 leading-relaxed">
+                                Expert in educational psychology and primary foundations. Leena ensures that the transition to GCSE is academically seamless.
+                            </p>
+                            <div class="mt-6 pt-6 border-t border-slate-50 flex items-center justify-between">
+                                <span class="bg-slate-900 text-white text-[9px] px-3 py-1 rounded-full font-black uppercase">Foundation Lead</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-12 border-4 border-dashed border-slate-100 rounded-[2.5rem]">
+                    <p class="text-slate-400 font-bold text-center">Plus 20+ Verified UK-Based Subject Specialists</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-navy text-white text-center mx-6 mb-20 rounded-[3rem] relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-brand-electric/20 rounded-full blur-3xl"></div>
+        <div class="relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-8">Ready for Academic Mastery?</h2>
+            <a href="trial.html" class="inline-block bg-brand-electric text-white px-12 py-5 rounded-2xl font-black text-xl hover:scale-105 transition shadow-2xl shadow-blue-900/50">
+                Book Your 1:1 Diagnostic Trial
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Header Toggle Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuPath = document.getElementById('menu-path');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            if (isOpen) {
+                mobileMenu.classList.add('hidden');
+                menuPath.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            } else {
+                mobileMenu.classList.remove('hidden');
+                menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+    </script>
+</body>
+</html>

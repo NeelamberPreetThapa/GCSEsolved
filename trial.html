@@ -27,23 +27,72 @@
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased">
 
-    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-brand-navy">
-                GCSE<span class="text-brand-electric font-black">SOLVED</span>
+   <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+    <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="index.html" class="text-2xl font-extrabold tracking-tight text-brand-navy">
+            GCSE<span class="text-brand-electric font-black">SOLVED</span>
+        </a>
+
+        <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+            <a href="subjects.html" class="hover:text-brand-electric transition">Subjects</a>
+            <a href="Methodology.html" class="hover:text-brand-electric transition">Methodology</a>
+            <a href="pricing.html" class="hover:text-brand-electric transition">Pricing</a>
+            <a href="Team.html" class="hover:text-brand-electric transition">Team</a>
+            <a href="index.html" class="bg-brand-navy text-white px-6 py-3 rounded-full hover:bg-slate-800 transition">Back to Home</a>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-slate-900 focus:outline-none p-2">
+            <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 absolute w-full left-0 top-20 shadow-2xl overflow-hidden">
+        <div class="px-6 py-8 flex flex-col space-y-6">
+            <a href="subjects.html" class="text-xl font-bold text-slate-700 hover:text-brand-electric">Subjects</a>
+            <a href="Methodology.html" class="text-xl font-bold text-slate-700 hover:text-brand-electric">Methodology</a>
+            <a href="pricing.html" class="text-xl font-bold text-slate-700 hover:text-brand-electric">Pricing</a>
+            <a href="Team.html" class="text-xl font-bold text-slate-700 hover:text-brand-electric">Team</a>
+            <hr class="border-slate-100">
+            <a href="index.html" class="w-full bg-brand-navy text-white text-center py-4 rounded-2xl font-extrabold text-lg shadow-lg">
+                Back to Home
             </a>
-            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
-                <a href="subjects.html" class="hover:text-brand-electric transition">Subjects</a>
-                <a href="Methodology.html" class="hover:text-brand-electric transition">Methodology</a>
-                <a href="pricing.html" class="hover:text-brand-electric transition">Pricing</a>
-                <a href="Team.html" class="hover:text-brand-electric transition">Team</a>
-                <a href="index.html" class="bg-brand-navy text-white px-6 py-3 rounded-full hover:bg-slate-800 transition">Back to Home</a>
-            </div>
-            <button id="menu-btn" class="md:hidden text-slate-900 focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </nav>
-    </header>
+        </div>
+    </div>
+</header>
+
+<script>
+    // Logic to handle mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuPath = document.getElementById('menu-path');
+
+    menuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+
+        if (isOpen) {
+            // Close Menu
+            mobileMenu.classList.add('hidden');
+            // Show Hamburger Icon
+            menuPath.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+        } else {
+            // Open Menu
+            mobileMenu.classList.remove('hidden');
+            // Show 'X' (Close) Icon
+            menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+        }
+    });
+
+    // Close menu when clicking any link
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuPath.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+        });
+    });
+</script>
 
     <main class="pt-32 pb-20">
         <div class="max-w-2xl mx-auto px-6">

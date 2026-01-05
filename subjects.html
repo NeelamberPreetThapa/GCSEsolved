@@ -13,26 +13,56 @@
 </head>
 <body class="bg-[#FAFBFF] text-slate-900 font-sans antialiased">
 
-      <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="text-2xl font-extrabold tracking-tight text-brand-navy">
-                GCSE<span class="text-blue-600">SOLVED</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
-                
-                <a href="/Methodology.html" class="hover:text-brand-electric transition">Methodology</a>
-                <a href="/index.html" class="hover:text-brand-electric transition">Home</a>
-                <a href="/Team.html" class="hover:text-brand-electric transition">Team</a>
-                <a href="https://wa.me/7895741717" class="flex items-center text-green-600 font-semibold hover:text-green-700 transition">
-                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></span>
-                    WhatsApp Expert
-                </a>
-                <a href="/trial.html" class="bg-slate-900 text-white px-6 py-3 rounded-full hover:bg-slate-800 transition shadow-lg shadow-navy-200">
-                    Book Free Trial
-                </a>
-            </div>
-        </nav>
-    </header>
+     <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="text-2xl font-extrabold tracking-tight text-brand-navy">
+            <a href="/index.html">GCSE<span class="text-blue-600">SOLVED</span></a>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+            <a href="/index.html" class="hover:text-brand-electric transition">Home</a>
+            <a href="/Methodology.html" class="hover:text-brand-electric transition">Methodology</a>
+            <a href="/Team.html" class="hover:text-brand-electric transition">Team</a>
+            <a href="https://wa.me/7895741717" class="flex items-center text-green-600 font-semibold hover:text-green-700 transition">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></span>
+                WhatsApp Expert
+            </a>
+            <a href="/trial.html" class="bg-slate-900 text-white px-6 py-3 rounded-full hover:bg-slate-800 transition shadow-lg shadow-navy-200">
+                Book Free Trial
+            </a>
+        </div>
+
+        <button id="mobile-toggle" class="md:hidden p-2 text-slate-600 focus:outline-none">
+            <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <div id="mobile-nav" class="hidden md:hidden bg-white border-b border-slate-100 shadow-xl overflow-hidden transition-all duration-300">
+        <div class="px-6 py-6 flex flex-col space-y-4">
+            <a href="/index.html" class="text-lg font-semibold text-slate-700">Home</a>
+            <a href="/Methodology.html" class="text-lg font-semibold text-slate-700">Methodology</a>
+            <a href="/Team.html" class="text-lg font-semibold text-slate-700">Team</a>
+            <a href="https://wa.me/7895741717" class="text-lg font-bold text-green-600 flex items-center">
+                WhatsApp Expert
+            </a>
+            <hr class="border-slate-100">
+            <a href="/trial.html" class="w-full bg-slate-900 text-white text-center py-4 rounded-xl font-bold shadow-lg">
+                Book Free Trial
+            </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    const btn = document.getElementById('mobile-toggle');
+    const nav = document.getElementById('mobile-nav');
+
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
+    });
+</script>
 
     <main class="pt-32 pb-24">
         <div class="max-w-7xl mx-auto px-6">
