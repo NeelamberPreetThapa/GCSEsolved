@@ -30,7 +30,7 @@
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
 
-   <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
     <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <a href="index.html" class="text-2xl font-extrabold tracking-tight text-brand-navy">
             GCSE<span class="text-brand-electric font-black">SOLVED</span>
@@ -40,6 +40,7 @@
             <a href="subjects.html" class="hover:text-brand-electric transition">Subjects</a>
             <a href="Methodology.html" class="hover:text-brand-electric transition">Methodology</a>
             <a href="pricing.html" class="text-brand-electric transition font-bold underline decoration-2 underline-offset-8">Pricing</a>
+            <a href="/index.html" class="text-xl font-bold text-slate-700">Home</a>
             <a href="team.html" class="hover:text-brand-electric transition">Team</a>
             <a href="trial.html" class="bg-brand-navy text-white px-6 py-3 rounded-full hover:bg-slate-800 transition shadow-lg shadow-navy-200">
                 Book Free Trial
@@ -48,7 +49,7 @@
 
         <button id="menu-btn" class="md:hidden text-slate-900 p-2 focus:outline-none">
             <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path id="path-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                <path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
         </button>
     </nav>
@@ -63,6 +64,27 @@
         </a>
     </div>
 </header>
+
+<script>
+    // Toggle Logic
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuPath = document.getElementById('menu-path');
+
+    menuBtn.addEventListener('click', () => {
+        const isMenuHidden = mobileMenu.classList.contains('hidden');
+        
+        if (isMenuHidden) {
+            mobileMenu.classList.remove('hidden');
+            // Switch to "X" Icon
+            menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+        } else {
+            mobileMenu.classList.add('hidden');
+            // Switch back to Hamburger Icon
+            menuPath.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+        }
+    });
+</script>
 
 <script>
     const menuBtn = document.getElementById('menu-btn');

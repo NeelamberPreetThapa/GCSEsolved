@@ -36,27 +36,67 @@
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
 
-    <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="text-2xl font-extrabold tracking-tight text-brand-navy">
-                GCSE<span class="text-brand-electric">SOLVED</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
-                <a href="/subjects.html" class="hover:text-brand-electric transition">Subjects</a>
-                
-                <a href="/Methodology.html" class="hover:text-brand-electric transition">Methodology</a>
-                <a href="/Pricing.html" class="hover:text-brand-electric transition">Pricing</a>
-                <a href="/team.html" class="hover:text-brand-electric transition">Team</a>
-                <a href="https://wa.me/7895741717" class="flex items-center text-brand-success">
-                    <span class="w-2 h-2 bg-brand-success rounded-full animate-pulse mr-2"></span>
-                    WhatsApp Expert
-                </a>
-                <a href="/trial.html" class="bg-brand-navy text-white px-6 py-3 rounded-full hover:bg-slate-800 transition shadow-lg shadow-navy-200">
-                    Book Free Trial
-                </a>
-            </div>
-        </nav>
-    </header>
+<header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="text-2xl font-extrabold tracking-tight text-brand-navy">
+            GCSE<span class="text-brand-electric">SOLVED</span>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+            <a href="/subjects.html" class="hover:text-brand-electric transition">Subjects</a>
+            <a href="/Methodology.html" class="hover:text-brand-electric transition">Methodology</a>
+            <a href="/Pricing.html" class="hover:text-brand-electric transition">Pricing</a>
+            <a href="/team.html" class="hover:text-brand-electric transition">Team</a>
+            <a href="https://wa.me/7895741717" class="flex items-center text-brand-success">
+                <span class="w-2 h-2 bg-brand-success rounded-full animate-pulse mr-2"></span>
+                WhatsApp Expert
+            </a>
+            <a href="/trial.html" class="bg-brand-navy text-white px-6 py-3 rounded-full hover:bg-slate-800 transition shadow-lg shadow-navy-200">
+                Book Free Trial
+            </a>
+        </div>
+
+        <button id="hamburger-btn" class="md:hidden text-brand-navy p-2 focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path id="hamburger-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <div id="mobile-nav" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-slate-100 absolute w-full left-0 top-20 shadow-2xl px-6 py-8 flex flex-col space-y-6">
+        <a href="/subjects.html" class="text-xl font-bold text-slate-700">Subjects</a>
+        <a href="/Methodology.html" class="text-xl font-bold text-slate-700">Methodology</a>
+        <a href="/Pricing.html" class="text-xl font-bold text-slate-700">Pricing</a>
+        <a href="/team.html" class="text-xl font-bold text-slate-700">Team</a>
+        <a href="https://wa.me/7895741717" class="text-xl font-bold text-brand-success flex items-center">
+            <span class="w-2 h-2 bg-brand-success rounded-full animate-pulse mr-2"></span>
+            WhatsApp Expert
+        </a>
+        <hr class="border-slate-100">
+        <a href="/trial.html" class="w-full bg-brand-navy text-white text-center py-4 rounded-2xl font-extrabold text-lg shadow-xl shadow-navy-200">
+            Book Free Trial
+        </a>
+    </div>
+</header>
+
+<script>
+    const btn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('mobile-nav');
+    const path = document.getElementById('hamburger-path');
+
+    btn.addEventListener('click', () => {
+        const isOpen = !menu.classList.contains('hidden');
+        if (isOpen) {
+            menu.classList.add('hidden');
+            // Hamburger Icon
+            path.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+        } else {
+            menu.classList.remove('hidden');
+            // Close (X) Icon
+            path.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+        }
+    });
+</script>
 
     <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
