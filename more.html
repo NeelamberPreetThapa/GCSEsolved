@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter from the Founder | GCSE Solved</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:italic,wght@700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            electric: '#3B82F6',
+                            success: '#10B981',
+                        }
+                    },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-slate-900 font-sans antialiased">
+
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-extrabold tracking-tight text-brand-navy">
+                GCSE<span class="text-brand-electric font-black">SOLVED</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-600">
+                <a href="subjects.html" class="hover:text-brand-electric transition">Subjects</a>
+                <a href="Methodology.html" class="hover:text-brand-electric transition">Methodology</a>
+                <a href="pricing.html" class="hover:text-brand-electric transition">Pricing</a>
+                <a href="team.html" class="hover:text-brand-electric transition">Team</a>
+                <a href="index.html" class="bg-brand-navy text-white px-6 py-3 rounded-full hover:bg-slate-800 transition">Home</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-slate-900 focus:outline-none p-2">
+                <svg id="menu-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 absolute w-full left-0 top-20 shadow-2xl z-50">
+            <div class="px-6 py-8 flex flex-col space-y-6 text-center">
+                <a href="subjects.html" class="text-xl font-bold">Subjects</a>
+                <a href="Methodology.html" class="text-xl font-bold">Methodology</a>
+                <a href="pricing.html" class="text-xl font-bold">Pricing</a>
+                <a href="team.html" class="text-xl font-bold">Team</a>
+                <a href="index.html" class="w-full bg-brand-navy text-white py-4 rounded-2xl font-extrabold">Home</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <div class="relative order-2 lg:order-1">
+                    <div class="absolute -inset-4 bg-gradient-to-tr from-brand-electric/30 to-transparent rounded-[3rem] blur-3xl"></div>
+                    <div class="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+                        <img src="https://www.exaltedmercury.com/imgs/1000203615.webp" alt="Dr. Neelamber Thapa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl border border-slate-100 hidden md:block">
+                        <p class="text-brand-electric font-black text-2xl"></p>
+                        <p class="text-slate-500 text-xs font-bold uppercase tracking-widest">Applied Mathematics</p>
+                    </div>
+                </div>
+
+                <div class="space-y-8 order-1 lg:order-2">
+                    <div class="inline-block px-4 py-1.5 bg-blue-50 text-brand-electric rounded-full text-xs font-black uppercase tracking-[0.2em]">
+                        Letter from the Founder
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-black text-brand-navy leading-tight">
+                        Results are not <br> <span class="text-brand-electric">Negotiable.</span>
+                    </h1>
+                    
+                    <div class="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
+                        <p>
+                            To the parents who are concerned about their child’s academic future: <br><br>
+                            I built <strong>GCSE Solved</strong> with a single, uncompromising vision—to provide students with the same level of elite academic oversight that is usually reserved for the top 1% of UK private schools.
+                        </p>
+                        <p>
+                            As an expert in Applied Mathematics, I understand that every student learns differently. This is why I am <strong>personally available</strong> for every single student who joins our platform. I personally conduct counseling sessions with parents to ensure that we are not just teaching, but strategically mapping a path to a Grade 9.
+                        </p>
+                        
+                        <div class="bg-brand-navy p-8 rounded-[2rem] text-white space-y-4 shadow-2xl shadow-blue-900/20">
+                            <h3 class="text-2xl font-bold text-brand-electric italic font-serif">"My Personal Guarantee to You"</h3>
+                            <p class="text-blue-100 text-sm md:text-base">
+                                Your child is in trusted hands. I promise that you will see a <strong>visible improvement</strong> in your child's confidence and test scores within just <strong>15 days</strong>. 
+                            </p>
+                            <p class="text-brand-success font-black text-lg">
+                                If you don't see results, I will personally refund your money—no questions asked.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-6">
+                        <div class="text-left">
+                            <p class="font-black text-2xl text-brand-navy">Dr. Neelamber Thapa</p>
+                            <p class="text-slate-400 font-bold uppercase text-xs tracking-widest">Founder & Lead Academic Strategist</p>
+                        </div>
+                        <a href="https://linkedin.com/in/neelamberthapa" target="_blank" class="flex items-center space-x-2 bg-blue-50 text-brand-electric px-6 py-3 rounded-full hover:bg-brand-electric hover:text-white transition-all font-bold">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <span>Connect on LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center">
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
+                <div class="text-3xl mb-4">🤝</div>
+                <h4 class="font-bold text-xl mb-2">Direct Access</h4>
+                <p class="text-slate-500 text-sm">Every student has direct oversight from the founder. No bureaucracy.</p>
+            </div>
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
+                <div class="text-3xl mb-4">📞</div>
+                <h4 class="font-bold text-xl mb-2">Parent Counseling</h4>
+                <h4 class="font-bold text-xl mb-2">Personally taking counseling sessions with all the parents.</h4>
+                <p class="text-slate-500 text-sm">Personal strategy sessions to align academic goals with student potential.</p>
+            </div>
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
+                <div class="text-3xl mb-4">⚡</div>
+                <h4 class="font-bold text-xl mb-2">No-Risk Growth</h4>
+                <p class="text-slate-500 text-sm">Visible improvement in 15 days or your investment is returned in full.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Header Toggle Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuPath = document.getElementById('menu-path');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            if (isOpen) {
+                mobileMenu.classList.add('hidden');
+                menuPath.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+            } else {
+                mobileMenu.classList.remove('hidden');
+                menuPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+    </script>
+</body>
+</html>
