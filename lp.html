@@ -249,6 +249,8 @@ src="https://www.facebook.com/tr?id=2151546215589145&ev=PageView&noscript=1"
             
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(r => {
+
+fbq('track', 'Lead'); // 🔥 yahi main cheez hai 
                     form.classList.add('hidden');
                     successMsg.classList.remove('hidden');
                 })
