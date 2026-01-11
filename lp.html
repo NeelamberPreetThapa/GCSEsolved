@@ -25,6 +25,7 @@
                             navy: '#0F172A',
                             electric: '#3B82F6',
                             success: '#10B981',
+                            urgency: '#EF4444',
                         }
                     },
                     fontFamily: { sans: ['Inter', 'sans-serif'] }
@@ -35,36 +36,34 @@
     <style>
         .sticky-btn-active { transform: translateY(0); transition: 0.3s; }
         .sticky-btn-hidden { transform: translateY(100px); transition: 0.3s; }
-        input:focus, select:focus { border-color: #3B82F6; outline: none; ring: 2px; ring-color: #3B82F6; }
+        .nav-link-mobile { font-size: 0.75rem; font-weight: 700; color: #475569; }
     </style>
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
 
-    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-8">
-                <a href="index.html" class="text-2xl font-extrabold tracking-tight text-brand-navy">
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100">
+        <nav class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+            <div class="flex flex-col md:flex-row md:items-center md:space-x-8">
+                <a href="index.html" class="text-xl md:text-2xl font-extrabold tracking-tight text-brand-navy">
                     GCSE<span class="text-brand-electric">SOLVED</span>
                 </a>
-                <div class="hidden md:flex space-x-6">
-                    <a href="index.html" class="text-sm font-bold text-slate-600 hover:text-brand-electric transition">Home</a>
-                    <a href="more.html" class="text-sm font-bold text-slate-600 hover:text-brand-electric transition">Meet the Founder</a>
+                <div class="flex space-x-4 mt-1 md:mt-0">
+                    <a href="index.html" class="nav-link-mobile md:text-sm hover:text-brand-electric">Home</a>
+                    <a href="more.html" class="nav-link-mobile md:text-sm hover:text-brand-electric">Meet Founder</a>
                 </div>
             </div>
-            <a href="https://wa.me/7895741717?text=Hello%2C%20I%20would%20like%20to%20discuss%20GCSE%20classes%20for%20my%20child.%0ACurrent%20grade%3A%20
-" class="text-sm font-bold text-brand-success flex items-center bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
+            <a href="https://wa.me/7895741717?text=Hello" class="hidden sm:flex text-sm font-bold text-brand-success items-center bg-white px-4 py-2 rounded-full shadow-sm border border-slate-100">
                 <span class="w-2 h-2 bg-brand-success rounded-full animate-pulse mr-2"></span>
                 WhatsApp Expert
             </a>
         </nav>
     </header>
 
-    <section class="pt-32 pb-16 md:pt-48 md:pb-32 bg-gradient-to-b from-blue-50/50 to-white overflow-hidden">
+    <section class="pt-32 pb-12 md:pt-48 md:pb-24 bg-gradient-to-b from-blue-50/50 to-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-            
             <div class="space-y-8 text-center lg:text-left">
                 <div class="inline-flex items-center space-x-2 px-3 py-1 bg-white border border-blue-100 rounded-full shadow-sm">
-                    <p class="text-[10px] font-black uppercase tracking-widest text-brand-electric">Trusted by 500+ UK/US Parents</p>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-brand-electric">The Only Solution for Grade 9</p>
                 </div>
                 
                 <h1 class="text-4xl md:text-7xl font-black text-brand-navy leading-[1.05] tracking-tight">
@@ -73,69 +72,81 @@
                 </h1>
                 
                 <p class="text-lg md:text-xl text-slate-500 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                    Personalised 1:1 expert tutoring for <strong>AQA, Edexcel, and OCR</strong>. We don't just teach—we strategise to ensure your child hits a Grade 9. 
+                    Personalised 1:1 tutoring. <strong>AQA, Edexcel, and OCR</strong> experts. We provide the structured guide your child needs to stop losing marks.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#trial" class="px-10 py-5 bg-brand-navy text-white rounded-2xl text-xl font-black hover:scale-105 transition shadow-2xl shadow-navy-200 text-center">
-                        Book Your Free Trial
+                    <a href="#trial" class="px-10 py-5 bg-brand-navy text-white rounded-2xl text-xl font-black hover:scale-105 transition shadow-2xl text-center">
+                        Book Free Trial Session
                     </a>
-                </div>
-
-                <div class="flex items-center justify-center lg:justify-start space-x-6 text-sm font-bold text-slate-400 uppercase tracking-tighter">
-                    <span>✓ 15-Day Money Back</span>
-                    <span>✓ Elite Tutors</span>
-                    <span>✓ 1:1 Sessions</span>
                 </div>
             </div>
 
             <div class="relative">
                 <div class="absolute -inset-4 bg-brand-electric/20 rounded-[3rem] blur-3xl"></div>
                 <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
-                    <img src="https://images.unsplash.com/photo-1523240715181-01489a943ee2?auto=format&fit=crop&q=80&w=1000" alt="Happy Student GCSE Success" class="w-full aspect-square object-cover">
-                    <div class="absolute top-6 left-6 bg-brand-success text-white px-4 py-2 rounded-full font-black text-xs uppercase tracking-widest">
-                        Grade 9 Achieved
+                    <img src="https://images.unsplash.com/photo-1523240715181-01489a943ee2?auto=format&fit=crop&q=80&w=1000" alt="Student Success" class="w-full aspect-square object-cover">
+                    <div class="absolute bottom-6 right-6 bg-brand-navy text-white px-6 py-4 rounded-2xl font-bold shadow-xl">
+                        <p class="text-xs uppercase text-blue-400">Trusted By</p>
+                        <p class="text-lg">500+ UK/US Parents</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-black text-brand-navy mb-4">Why students struggle the most?</h2>
+            <p class="text-slate-500">And why we are the <strong>only solution</strong> that works.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="text-brand-electric font-black text-4xl mb-4">01</div>
+                <h3 class="text-xl font-bold mb-3 text-brand-navy">Blind Practice</h3>
+                <p class="text-slate-600">Students practice questions without ever knowing exactly <strong>why marks are lost</strong>. We fix this instantly.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="text-brand-electric font-black text-4xl mb-4">02</div>
+                <h3 class="text-xl font-bold mb-3 text-brand-navy">Hidden Weak Basics</h3>
+                <p class="text-slate-600">Weak foundations stay hidden until the exam day exposes them. Our experts identify and bridge gaps early.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="text-brand-electric font-black text-4xl mb-4">03</div>
+                <h3 class="text-xl font-bold mb-3 text-brand-navy">Lack of Structure</h3>
+                <p class="text-slate-600">Without a structured guide, improvement is random. We provide a <strong>guaranteed roadmap</strong> to Grade 9.</p>
             </div>
         </div>
     </section>
 
     <section class="py-24 bg-brand-navy text-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
             <div class="p-8 bg-white/5 border border-white/10 rounded-3xl">
-                <h3 class="text-xl font-bold mb-4 text-brand-electric">Board Mastery</h3>
-                <p class="text-blue-100/70 text-sm">Every session focuses on the specific mark schemes of AQA, Edexcel, and OCR to maximise marks.</p>
+                <h3 class="text-xl font-bold mb-4 text-brand-electric">Pay After Trial</h3>
+                <p class="text-blue-100/70 text-sm">We are so confident that we ask you to pay only after you are satisfied with the trial session.</p>
             </div>
             <div class="p-8 bg-white/5 border border-white/10 rounded-3xl">
-                <h3 class="text-xl font-bold mb-4 text-brand-success">Elite Faculty</h3>
-                <p class="text-blue-100/70 text-sm">Learn from PhD scholars and subject leads who understand the psychology of high performance.</p>
+                <h3 class="text-xl font-bold mb-4 text-brand-success">15-Day Money Back</h3>
+                <p class="text-blue-100/70 text-sm">The only platform offering a full 15-day money-back guarantee. Zero risk for parents.</p>
             </div>
             <div class="p-8 bg-white/5 border border-white/10 rounded-3xl">
-                <h3 class="text-xl font-bold mb-4 text-purple-400">Zero Risk</h3>
-                <p class="text-blue-100/70 text-sm">No long-term contracts. 15-day money-back guarantee. We prove our value every single session.</p>
+                <h3 class="text-xl font-bold mb-4 text-purple-400">Multiple Experts</h3>
+                <p class="text-blue-100/70 text-sm">From PhD scholars to subject leads—your child gets access to multiple levels of elite expertise.</p>
             </div>
         </div>
     </section>
 
-    <section class="py-16 bg-slate-50">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-blue-50 relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-2 h-full bg-brand-electric"></div>
-                <p class="text-2xl md:text-3xl font-serif italic text-brand-navy leading-relaxed mb-6">
-                    "I personally guarantee a visible improvement in your child's results within 15 days, or I will give your money back—no questions asked."
-                </p>
-                <div class="flex items-center justify-center space-x-4">
-                    <div class="text-left">
-                        <p class="font-black text-brand-navy">Dr. Neelamber Thapa (PhD)</p>
-                        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Founder & Lead Strategist</p>
-                    </div>
-                </div>
-            </div>
+    <div class="bg-brand-urgency py-3 overflow-hidden">
+        <div class="whitespace-nowrap animate-pulse text-center">
+            <span class="text-white font-black uppercase tracking-widest text-sm">
+                ⚠️ LIMITED SLOTS! We only take a handful of new seats every week. Secure yours now!
+            </span>
         </div>
-    </section>
+    </div>
 
-    <section id="trial" class="py-24">
+ <section id="trial" class="py-24">
         <div class="max-w-2xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-black text-brand-navy mb-4">Start Your Roadmap to Grade 9</h2>
@@ -206,7 +217,6 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwL0hVCYZo7syD9CsnyKWAH4a9dd57fG1M4JZAbIqtajg80wlIuPuxHXyodCaEakepQMQ/exec';
         
-        // Timezone Capture
         const locField = document.getElementById('location-input');
         if (locField) locField.value = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
@@ -217,22 +227,20 @@
         form.addEventListener('submit', e => {
             e.preventDefault();
             submitBtn.disabled = true;
-            submitBtn.innerText = "Processing...";
+            submitBtn.innerText = "Reserving Slot...";
             
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(r => {
                     form.classList.add('hidden');
                     successMsg.classList.remove('hidden');
-                    window.scrollTo({ top: document.getElementById('trial').offsetTop - 100, behavior: 'smooth' });
                 })
                 .catch(err => {
                     submitBtn.disabled = false;
                     submitBtn.innerText = "Try Again";
-                    alert("Submission failed. Please reach out via WhatsApp.");
+                    alert("Connection error. Please use WhatsApp.");
                 });
         });
 
-        // Sticky CTA Logic
         const stickyCta = document.getElementById('sticky-cta');
         window.onscroll = function() {
             if (window.scrollY > 600) {
